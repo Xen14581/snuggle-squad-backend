@@ -3,13 +3,13 @@ const { gql } = require("apollo-server-express");
 const typeDefs = gql`
   type Raffle {
     id: ID
-    name: String
-    description: String
-    ticket_count: Int
-    ticket_price: Int
-    start_time: String
-    end_time: String
-    reward_token: String
+    name: String!
+    description: String!
+    ticket_count: Int!
+    ticket_price: Int!
+    start_time: String!
+    end_time: String!
+    reward_token: String!
     participants: [User]
   }
 
@@ -18,13 +18,13 @@ const typeDefs = gql`
   }
 
   input RaffleInput {
-    name: String
-    description: String
-    ticket_count: Int
-    ticket_price: Int
-    start_time: String
-    end_time: String
-    reward_token: String
+    name: String!
+    description: String!
+    ticket_count: Int!
+    ticket_price: Int!
+    start_time: String!
+    end_time: String!
+    reward_token: String!
   }
 
   input RegistrationInput {
